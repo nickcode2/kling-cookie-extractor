@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: kling-automation-1
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
