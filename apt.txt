@@ -1,1 +1,1 @@
-chromium-browser
+add chromium-browser to apt.txt
