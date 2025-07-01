@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.get("/", async (req, res) => {
   const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/chromium",
+    executablePath: "/usr/bin/google-chrome-stable",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     headless: true,
   });
