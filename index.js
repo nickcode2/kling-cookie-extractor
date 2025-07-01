@@ -1,12 +1,13 @@
 const express = require("express");
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
 const app = express();
 const PORT = 3000;
 
 app.get("/", async (req, res) => {
   const browser = await puppeteer.launch({
+    executablePath: "/usr/bin/chromium-browser",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
     headless: true,
-    executablePath: "/usr/bin/chromium",
   });
 
   const page = await browser.newPage();
